@@ -93,7 +93,7 @@ class GamePole:
     def open_tile(self, x, y):
         tile = self.pole[x][y]
 
-        if not tile.fl_open:
+        if not tile.fl_open and not tile.is_flagged:
             if tile.is_mine:
                 # если там мина - ты проиграл!
                 self.end_game()
